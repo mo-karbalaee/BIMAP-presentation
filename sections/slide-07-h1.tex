@@ -5,29 +5,36 @@
 \section{H1: Label efficiency}
 
 \begin{frame}[t]{H1 --- Does self-supervision help when labels are scarce?}
-\begin{columns}[c]
-% ---- Left: terse bullets -------------------------------------------------
-\begin{column}{0.50\textwidth}
-{\small
-\begin{itemize}\itemsep=0.2em
+% ---- Figure: full width across the top (Dice | detection F1) -------------
+\centering
+\includegraphics[width=\linewidth,height=0.42\textheight,keepaspectratio]%
+{contents/images/h1-results.png}
+
+\vfill
+% ---- Bullets: lower third, two compact columns ---------------------------
+{\footnotesize
+\begin{columns}[t]
+\begin{column}{0.5\textwidth}
+\begin{itemize}\itemsep=0.1em
 \item \textbf{Hypothesis:} self-supervised pretraining should help, most of all
       when labels are scarce
 \item \textbf{Pretrain:} self-supervised (JEPA) on the calcium video with labels
       removed
 \item \textbf{Fine-tune + test:} hold out one labeled recording, split it 80/20
       $\to$ fine-tune at 10--100\% of the train, test on the fixed 20\%
-\item \textbf{Baseline:} from-scratch (same split)
-\item \textbf{Metric:} Dice (held-out mouse) across label fractions
-\item \textbf{Result:} JEPA-pretrained and from-scratch perform comparably across
-      all label fractions
-\end{itemize}}
+\end{itemize}
 \end{column}
-\hfill%
-% ---- Right: label-efficiency curve (~half width, vertically centered) ----
-\begin{column}{0.48\textwidth}
-\centering
-\includegraphics[width=\linewidth,height=0.80\textheight,keepaspectratio]%
-{contents/images/h1-results.png}
+\begin{column}{0.5\textwidth}
+\begin{itemize}\itemsep=0.1em
+\item \textbf{Baselines:} from-scratch (same split) + off-the-shelf Cellpose
+      \cite{stringer2021cellpose}
+\item \textbf{Metrics:} Dice (pixel overlap) + detection F1 (did we find each
+      neuron?)
+\item \textbf{Result:} JEPA-pretrained and from-scratch both far exceed
+      off-the-shelf Cellpose, and perform comparably to each other across all
+      label fractions
+\end{itemize}
 \end{column}
 \end{columns}
+}
 \end{frame}
