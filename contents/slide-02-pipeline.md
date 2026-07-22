@@ -18,7 +18,7 @@ Bullets (render exactly these, terse):
 - Not a script: one full **pipeline**, single entry point
 - Two modes: **train** new models, **infer** on new recordings
 - Modular, swappable stages; segmenter = our **JEPA** model or a **Cellpose** baseline `\cite{stringer2021cellpose}`
-- Every run logged (Dice, mIoU); checkpoints versioned, never overwritten
+- Every run logged (Dice, detection F1); checkpoints versioned, never overwritten
 - Reproducible: one config file, no hardcoded paths, clone and run
 
 Diagram (top, full width):
