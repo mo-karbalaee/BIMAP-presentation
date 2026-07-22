@@ -1,0 +1,42 @@
+% ..............................................................................
+% Slide 10 -- Reading our own results critically (self-critique + limitations)
+% Source content: contents/slide-10-critique.md  (bullets are FINAL -- render as-is)
+% ------------------------------------------------------------------------------
+\section{Critique}
+
+\begin{frame}[t]{Reading our own results critically}
+{\footnotesize
+\begin{columns}[t]
+% ---- Statistics ----------------------------------------------------------
+\begin{column}{0.5\textwidth}
+\textbf{Statistics --- significant $\neq$ meaningful}
+\begin{itemize}\itemsep=0.25em
+\item H1: JEPA vs supervised is statistically significant ($p \approx 10^{-20}$)
+      but the effect is \textbf{tiny ($\Delta \approx 0.02$)} and flips with
+      label fraction and resolution $\to$ \textbf{no robust advantage}
+\item H3: with millions of pairs, $p$ is meaningless $\to$ report
+      \textbf{effect size}: Cohen's $d$ = SSL 0.66, supervised 1.45, random 0.14
+\item \textbf{Single training seed} $\to$ we measure evaluation variance, not
+      training variance
+\end{itemize}
+\end{column}
+\hfill%
+% ---- Limitations ---------------------------------------------------------
+\begin{column}{0.5\textwidth}
+\textbf{Limitations}
+\begin{itemize}\itemsep=0.25em
+\item Dice and mIoU are redundant (monotonically linked) $\to$ we added
+      \textbf{detection F1}, which stays $\sim$0.2 for every model $\to$
+      \textbf{separating individual neurons is unsolved}
+\item We beat off-the-shelf Cellpose (Dice 0.28, F1 0.17), but we are
+      \textbf{trained on the target} while Cellpose is \textbf{zero-shot and
+      untuned}
+\item Evaluation is \textbf{within-recording} (train and test on the same
+      recording) $\to$ not yet cross-recording generalization
+\item SSL pretraining \textbf{under-converges} (validation loss diverges) $\to$
+      our SSL results are a floor, not a ceiling
+\end{itemize}
+\end{column}
+\end{columns}
+}
+\end{frame}
