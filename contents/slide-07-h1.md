@@ -16,7 +16,9 @@ Slide title:
 Bullets (render exactly these, terse):
 
 - **Hypothesis:** self-supervised pretraining should help, most of all when labels are scarce
-- **Setup:** pretrain on unlabeled mouse (test recording held out) → fine-tune at 10–100% labels vs from-scratch; Cellpose = off-the-shelf baseline `\cite{stringer2021cellpose}`
+- **Pretrain:** self-supervised (JEPA) on the calcium video with labels removed
+- **Fine-tune + test:** hold out one labeled recording, split it 80/20 → fine-tune at 10–100% of the train, test on the fixed 20%
+- **Baselines:** from-scratch (same split) + off-the-shelf Cellpose `\cite{stringer2021cellpose}`
 - **Metrics:** Dice (pixel overlap) + detection F1 (did we find each neuron?)
 - **Result:** both far beat Cellpose, but **SSL does not beat from-scratch**, and **detection F1 stays low for all** → separating individual neurons is the open problem
 

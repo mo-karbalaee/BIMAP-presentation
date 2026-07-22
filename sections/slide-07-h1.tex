@@ -12,19 +12,22 @@
 
 \vfill
 % ---- Bullets: lower third, two compact columns ---------------------------
-{\small
+{\footnotesize
 \begin{columns}[t]
 \begin{column}{0.5\textwidth}
-\begin{itemize}\itemsep=0.25em
+\begin{itemize}\itemsep=0.2em
 \item \textbf{Hypothesis:} self-supervised pretraining should help, most of all
       when labels are scarce
-\item \textbf{Setup:} pretrain on unlabeled mouse (test recording held out) $\to$
-      fine-tune at 10--100\% labels vs from-scratch; Cellpose = off-the-shelf
-      baseline \cite{stringer2021cellpose}
+\item \textbf{Pretrain:} self-supervised (JEPA) on the calcium video with labels
+      removed
+\item \textbf{Fine-tune + test:} hold out one labeled recording, split it 80/20
+      $\to$ fine-tune at 10--100\% of the train, test on the fixed 20\%
 \end{itemize}
 \end{column}
 \begin{column}{0.5\textwidth}
-\begin{itemize}\itemsep=0.25em
+\begin{itemize}\itemsep=0.2em
+\item \textbf{Baselines:} from-scratch (same split) + off-the-shelf Cellpose
+      \cite{stringer2021cellpose}
 \item \textbf{Metrics:} Dice (pixel overlap) + detection F1 (did we find each
       neuron?)
 \item \textbf{Result:} both far beat Cellpose, but \textbf{SSL does not beat
