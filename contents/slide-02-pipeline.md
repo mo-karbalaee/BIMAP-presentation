@@ -1,35 +1,29 @@
-# Slide 2 — It's a Pipeline, Not Just a Model
+Generate slide 2 of the NEUROSEG presentation, the pipeline slide (right after motivation).
 
-## On-slide content
+You are the LaTeX manager. The content below is FINAL. Render the bullets as-is: short, minimal, one idea each. Do NOT turn them into sentences or paragraphs, and do not add content. This is a talk, not a paper.
 
-**Title:** A real end-to-end pipeline: train, infer, segment
+Message of this slide: the deliverable is a real, reusable end-to-end pipeline (not a one-off script). No experiment results here, no hypothesis detail beyond naming H1/H2/H3 as trainer options.
 
-- The deliverable is a **working pipeline**, not a one-off script or a single model.
-- **Two modes from one entry point:**
-  - **Training** — train a new model, log metrics (Dice, mIoU), save a versioned checkpoint.
-  - **Inference** — pick any trained checkpoint, run it on new recordings, and produce **actual segmentations + activity traces**.
-- **Modular stages** (swappable): load → preprocess → **segment** → activity-trace extraction → visualize.
-- **Reproducible & configurable:** clone-and-run, single config file, no hardcoded paths; the segmenter can run our **JEPA model or a Cellpose baseline**.
-- **This is (and exceeds) the Phase-0 MVP:** load → preprocess → segment → plot traces, end-to-end — plus self-supervised model training on top.
+Layout:
+- Put the diagram across the top of the slide, full width (it is a wide two-lane flow).
+- Put the bullets below it, in the lower third.
+- Keep the title in the top title area; nothing may collide with the footer band.
 
-## Figure / visual
+Slide title:
 
-- A left-to-right node diagram of the two paths:
-  - **Inference:** `Loader → Preprocessor → Segmenter → Activity-Trace → Visualizer` (loops over files).
-  - **Training:** `→ Trainer (H1 / H2 / H3) → checkpoint + metrics`.
-- We can auto-render this from the code (`visualize_pipeline()` → `docs/pipeline.png`). Flag if you want me to generate the PNG (or hand the node list to the LaTeX session to draw in TikZ for crisper output).
+> An end-to-end pipeline: train, infer, segment
 
-## Speaker notes (~1 min)
+Bullets (render exactly these, terse):
 
-- The point of this slide: **engineering maturity.** Many student projects produce a notebook that trains one model; this is a proper, reusable system.
-- Walk the two modes: *training* takes a dataset + output dir, runs one of the three experiment protocols, logs every metric, and saves a checkpoint named so you can identify the run without opening it. *Inference* gives an interactive CLI that lists checkpoints (with their Dice/mIoU/date) and lets you pick one to segment new data.
-- Emphasize the **stage separation** — data loading, preprocessing, segmentation, trace extraction, visualization are independent modules wired as a graph, so the segmenter is swappable (JEPA today, Cellpose as a baseline, something else tomorrow).
-- Close on **reproducibility**: one `config.yaml`, no hardcoded paths, clone-and-run on Kaggle/HPC — the professor can reproduce every number. Tie back to the brief's MVP and note we went beyond it.
+- Not a script: one full **pipeline**, single entry point
+- Two modes: **train** new models, **infer** on new recordings
+- Modular, swappable stages; segmenter = our **JEPA** model or a **Cellpose** baseline `\cite{stringer2021cellpose}`
+- Every run logged (Dice, mIoU); checkpoints versioned, never overwritten
+- Reproducible: one config file, no hardcoded paths, clone and run
+- Meets and exceeds the Phase 0 MVP (load → segment → activity traces)
 
-## Q&A prep
+Diagram (top, full width):
 
-- **What orchestrates the stages?** A small state-graph (LangGraph): a mode router sends training to the trainer node, inference through the load→…→visualize chain, iterating over input files.
-- **What does inference actually output?** Per-frame segmentation overlays rendered as an **MP4 video** + per-neuron **ΔF/F activity-trace** plots, cached to disk.
-- **How are checkpoints managed?** Never overwritten; each run writes a new file whose name encodes model + run id, with a JSON sidecar storing the architecture so inference rebuilds the model correctly.
-- **Where does Cellpose fit?** It's the built-in baseline segmenter (from the project brief) — same pipeline, different segmentation backend, so comparisons are apples-to-apples.
-- **Metrics?** Dice and mIoU, logged per epoch during training and reported at inference.
+- File: `contents/images/pipeline.png`
+- It shows two lanes: TRAINING (dataset → JEPA trainer H1/H2/H3 → checkpoint + metrics) and INFERENCE (new recording → load → preprocess → segment → activity traces → visualize).
+- This is our own figure; no external source credit needed.

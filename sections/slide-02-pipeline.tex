@@ -1,0 +1,32 @@
+% ..............................................................................
+% Slide 2 -- The pipeline (a real, reusable end-to-end tool)
+% Source content: contents/slide-02-pipeline.md  (bullets are FINAL -- render as-is)
+% ------------------------------------------------------------------------------
+\section{Pipeline}
+
+\begin{frame}[t]{An end-to-end pipeline: train, infer, segment}
+% ---- Diagram: full width across the top ----------------------------------
+\centering
+\includegraphics[width=\linewidth,height=0.62\textheight,keepaspectratio]%
+{contents/images/pipeline.png}
+
+\vfill
+% ---- Bullets: lower third, two compact columns ---------------------------
+\begin{columns}[t]
+\begin{column}{0.5\textwidth}
+\begin{itemize}
+\item Not a script: one full \textbf{pipeline}, single entry point
+\item Two modes: \textbf{train} new models, \textbf{infer} on new recordings
+\item Modular, swappable stages; segmenter = our \textbf{JEPA} model or a
+      \textbf{Cellpose} baseline \cite{stringer2021cellpose}
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{itemize}
+\item Every run logged (Dice, mIoU); checkpoints versioned, never overwritten
+\item Reproducible: one config file, no hardcoded paths, clone and run
+\item Meets and exceeds the Phase 0 MVP (load $\to$ segment $\to$ activity traces)
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
