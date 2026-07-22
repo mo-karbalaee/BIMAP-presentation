@@ -131,6 +131,23 @@ Summer Semester 2026%
 \newcommand{\colorcite}[3]{{\hypersetup{citecolor=#1}{\cite[#2]{#3}}}} 
 % ------------------------------------------------
 % ================================================
+% Spotlight outline
+% ------------------------------------------------
+% On the section-divider slides (\tableofcontents[currentsection]) fade each
+% entry by its distance from the current section: current = full, one
+% before/after = dim, everything further fades into the abyss.
+\makeatletter
+\newcommand{\fau@tocfade}[1]{%
+  % distance of this entry's section from the current one
+  \edef\fau@d{\the\numexpr\inserttocsectionnumber-\value{section}\relax}%
+  \pgfmathsetmacro{\fau@op}{max(0.08, 0.8 - 0.32*abs(\fau@d))}%
+  {\pgfsetfillopacity{\fau@op}\usebeamertemplate{#1}\pgfsetfillopacity{1}}%
+}
+\setbeamertemplate{section in toc shaded}{\fau@tocfade{section in toc}}
+\setbeamertemplate{subsection in toc shaded}{\fau@tocfade{subsection in toc}}
+\makeatother
+
+% ================================================
 % The main document
 % ------------------------------------------------
 \begin{document}
