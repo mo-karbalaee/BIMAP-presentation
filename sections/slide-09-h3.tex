@@ -1,0 +1,37 @@
+% ..............................................................................
+% Slide 9 -- H3: are the learned features stable and distinct per neuron?
+% Source content: contents/slide-09-h3.md  (bullets are FINAL -- render as-is)
+% ------------------------------------------------------------------------------
+\section{H3: Feature quality}
+
+\begin{frame}[t]{H3 --- Are the learned features stable and distinct per neuron?}
+% ---- Figure: full width across the top -----------------------------------
+\centering
+\includegraphics[width=\linewidth,height=0.42\textheight,keepaspectratio]%
+{contents/images/h3-stability.png}
+
+\vfill
+% ---- Bullets: lower third, two compact columns ---------------------------
+{\footnotesize
+\begin{columns}[t]
+\begin{column}{0.5\textwidth}
+\begin{itemize}\itemsep=0.1em
+\item \textbf{Hypothesis:} a good representation keeps a neuron looking like
+      itself over time, and distinct from other neurons
+\item \textbf{Metric (uses no labels):} cosine similarity of the encoder's
+      features --- within-neuron (same neuron, different frames) vs
+      between-neuron (different neurons)
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{itemize}\itemsep=0.1em
+\item \textbf{Gap $=$ within $-$ between}; a large gap means the encoder actually
+      tells neurons apart
+\item \textbf{Result:} the self-supervised encoder shows a \textbf{clear gap, far
+      above random} $\to$ it learned to distinguish neurons \textbf{without ever
+      seeing a label} (supervised is strongest)
+\end{itemize}
+\end{column}
+\end{columns}
+}
+\end{frame}

@@ -131,6 +131,13 @@ Summer Semester 2026%
 \newcommand{\colorcite}[3]{{\hypersetup{citecolor=#1}{\cite[#2]{#3}}}} 
 % ------------------------------------------------
 % ================================================
+% Outline spotlight: current section at full opacity, the rest at 50%.
+% (The current section uses the non-shaded template; everything else is shaded.)
+% ------------------------------------------------
+\setbeamertemplate{section in toc shaded}[default][50]
+\setbeamertemplate{subsection in toc shaded}[default][50]
+
+% ================================================
 % The main document
 % ------------------------------------------------
 \begin{document}
@@ -154,6 +161,7 @@ Summer Semester 2026%
 \input{sections/slide-06-method}
 \input{sections/slide-07-h1}
 \input{sections/slide-08-h2}
+\input{sections/slide-09-h3}
 
 % ================================================
 % References (kept last; lists all cited works)

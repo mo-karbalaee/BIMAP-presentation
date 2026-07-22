@@ -147,7 +147,7 @@
 \setcounter{fau@seclo}{\the\numexpr\value{section}-2\relax}%
 \ifnum\value{fau@seclo}<1\relax\setcounter{fau@seclo}{1}\fi%
 \setcounter{fau@sechi}{\the\numexpr\value{section}+2\relax}%
-\edef\fau@dotoc{\noexpand\tableofcontents[sections={\arabic{fau@seclo}-\arabic{fau@sechi}}]}%
+\edef\fau@dotoc{\noexpand\tableofcontents[currentsection,sections={\arabic{fau@seclo}-\arabic{fau@sechi}}]}%
 \fau@dotoc%
 \end{frame}
 }%
