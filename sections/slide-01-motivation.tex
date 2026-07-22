@@ -1,36 +1,32 @@
 % ..............................................................................
-% Slide 1 -- Motivation (why calcium imaging matters, why an automatic tool)
-% Source content: contents/slide-01-motivation.md
+% Slide 1 -- Motivation (why calcium imaging matters, why automatic segmentation)
+% Source content: contents/slide-01-motivation.md  (bullets are FINAL -- render as-is)
 % ------------------------------------------------------------------------------
 \section{Motivation}
 
 \begin{frame}[t]{Calcium imaging: recording neuronal activity}
 \begin{columns}[c]
-% ---- Left: text ----------------------------------------------------------
-\begin{column}{0.53\textwidth}
+% ---- Left: terse bullets -------------------------------------------------
+\begin{column}{0.60\textwidth}
 \begin{itemize}
-\item Calcium imaging lets us see brain activity directly: when a neuron fires,
-      calcium rises and a fluorescent indicator brightens, so active neurons
-      \enquote{light up} over time (a 2D${}+{}$time movie).
+\item Calcium imaging = direct readout of brain activity
       \cite{grienberger2012calcium}
-\item A key window into how the brain works --- which neurons are active, and
-      when --- used across many species and labs.
-\item But the raw movie is not yet science: every neuron must first be located
-      (segmented) before its activity can be measured.
-\item Doing this by hand does not scale --- manual annotation is slow,
-      subjective, and inconsistent between annotators.
-\item So the value of this project is an automatic segmentation tool that makes
-      calcium-imaging analysis fast, objective, and scalable.
+\item Neuron fires $\to$ Ca$^{2+}$ rises $\to$ indicator brightens $\to$ active
+      neurons \enquote{light up} (2D${}+{}$time)
+\item A window into brain function: which neurons, when --- across species \& labs
+\item Raw movie $\neq$ science: each neuron must be \textbf{segmented} first
+\item Manual annotation: slow, subjective, doesn't scale
+\item \textbf{Goal:} automatic segmentation $\to$ fast, objective, scalable
 \end{itemize}
 \end{column}
-% ---- Right: hero image (vertically centered) -----------------------------
-\begin{column}{0.45\textwidth}
+\hfill%
+% ---- Right: image ~1/3 slide width, vertically centered ------------------
+\begin{column}{0.35\textwidth}
 \centering
 \includegraphics[width=\linewidth]{contents/images/raw-calcium-frame.png}\\[0.4em]
-{\small\itshape Raw calcium imaging --- active neurons appear as bright spots on
- a noisy field.}\\[0.3em]
-{\scriptsize Source: Neurofinder benchmark, dataset \texttt{00.00} --- mouse
- cortex, Svoboda Lab / Janelia.\ \cite{peron2015barrel, neurofinder}}
+{\small\itshape Raw calcium imaging --- active neurons as bright spots}\\[0.3em]
+{\scriptsize Neurofinder \texttt{00.00}, mouse cortex, Svoboda Lab / Janelia
+ \cite{peron2015barrel, neurofinder}}
 \end{column}
 \end{columns}
 \end{frame}
