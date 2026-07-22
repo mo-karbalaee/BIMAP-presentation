@@ -133,24 +133,13 @@
 % Section page
 % ------------------------------------------------------------------------------
 
-\newcounter{fau@seclo}
-\newcounter{fau@sechi}
 \AtBeginSection{%
 {%
 %\usebeamercolor[fg]{normal text}
-\begin{frame}[t,title]{-}
+\begin{frame}[title]{-}
 \usebeamerfont{title}%
 \hypersetup{linkcolor=TitleFont}%
-% Spotlight window: show only the current section +/- 2 so that long outlines
-% never overflow -- you just see the portion that fits. [t] keeps it snug
-% under the header (no empty gap above the list).
-\setcounter{fau@seclo}{\the\numexpr\value{section}-2\relax}%
-\ifnum\value{fau@seclo}<1\relax\setcounter{fau@seclo}{1}\fi%
-\setcounter{fau@sechi}{\the\numexpr\value{section}+2\relax}%
-\edef\fau@dotoc{\noexpand\tableofcontents[currentsection,sections={\arabic{fau@seclo}-\arabic{fau@sechi}}]}%
-% Pull the outline up under the header (kills the big-font leading gap).
-\vspace*{-\baselineskip}%
-\fau@dotoc%
+\tableofcontents[currentsection]%
 \end{frame}
 }%
 }%
