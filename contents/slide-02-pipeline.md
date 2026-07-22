@@ -20,7 +20,6 @@ Bullets (render exactly these, terse):
 - Modular, swappable stages; segmenter = our **JEPA** model or a **Cellpose** baseline `\cite{stringer2021cellpose}`
 - Every run logged (Dice, mIoU); checkpoints versioned, never overwritten
 - Reproducible: one config file, no hardcoded paths, clone and run
-- Meets and exceeds the Phase 0 MVP (load → segment → activity traces)
 
 Diagram (top, full width):
 
