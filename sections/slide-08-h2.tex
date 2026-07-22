@@ -1,0 +1,34 @@
+% ..............................................................................
+% Slide 8 -- H2: does self-supervision transfer across species?
+% Source content: contents/slide-08-h2.md  (bullets are FINAL -- render as-is)
+% ------------------------------------------------------------------------------
+\section{H2: Cross-species}
+
+\begin{frame}[t]{H2 --- Does self-supervision transfer across species?}
+\begin{columns}[c]
+% ---- Left: terse bullets -------------------------------------------------
+\begin{column}{0.56\textwidth}
+{\small
+\begin{itemize}\itemsep=0.2em
+\item \textbf{Hypothesis:} representations learned on one species should transfer
+      to another
+\item \textbf{Setup:} pretrain SSL on \textbf{\textit{Drosophila} + zebrafish}
+      (no labels) $\to$ fine-tune on \textbf{mouse}
+\item \textbf{Compared to:} same-species SSL (mouse pretraining) and from-scratch
+\item \textbf{Leakage-free:} the encoder is pretrained on a different species,
+      never sees the mouse test set
+\item \textbf{Metric:} Dice on held-out mouse, across label fractions
+\item \textbf{Result:} cross-species SSL \textbf{matches same-species SSL} at
+      every fraction $\to$ representations transfer across species with
+      \textbf{no meaningful penalty}
+\end{itemize}}
+\end{column}
+\hfill%
+% ---- Right: transfer curves (~half width, vertically centered) -----------
+\begin{column}{0.42\textwidth}
+\centering
+\includegraphics[width=\linewidth,height=0.62\textheight,keepaspectratio]%
+{contents/images/h2-transfer.png}
+\end{column}
+\end{columns}
+\end{frame}
