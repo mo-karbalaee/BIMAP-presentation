@@ -4,6 +4,8 @@
 
 *Subtitle:* Neural segmentation pipeline for calcium imaging
 
+Author: Mohammad Karbalaee
+
 **NEUROSEG**
 
 - Biomedical Image Analysis Project (BIMAP)
