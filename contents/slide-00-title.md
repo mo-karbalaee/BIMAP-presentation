@@ -2,11 +2,12 @@
 
 ## On-slide content
 
-*Eyebrow line (small, above the title):* Neural segmentation pipeline for calcium imaging
+*Subtitle:* Neural segmentation pipeline for calcium imaging
 
 **NEUROSEG**
 
-- **AnKi Lab** — Prof. Dr. Andreas M. Kist
+- Biomedical Image Analysis Project (BIMAP)
+- Conducted under the supervision of the AnKi Lab
 - Supervisor: Sophie Hauser, M.Sc.
-- **BIMAP** — Biomedical Image Analysis Project
+- Prof. Dr. Andreas M. Kist (Lab head)
 - Summer Semester 2026
