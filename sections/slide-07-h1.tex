@@ -1,0 +1,37 @@
+% ..............................................................................
+% Slide 7 -- H1: does self-supervision help when labels are scarce?
+% Source content: contents/slide-07-h1.md  (bullets are FINAL -- render as-is)
+% ------------------------------------------------------------------------------
+\section{H1: Label efficiency}
+
+\begin{frame}[t]{H1 --- Does self-supervision help when labels are scarce?}
+% ---- Figure: full width across the top (Dice | detection F1) -------------
+\centering
+\includegraphics[width=\linewidth,height=0.5\textheight,keepaspectratio]%
+{contents/images/h1-results.png}
+
+\vfill
+% ---- Bullets: lower third, two compact columns ---------------------------
+{\small
+\begin{columns}[t]
+\begin{column}{0.5\textwidth}
+\begin{itemize}\itemsep=0.25em
+\item \textbf{Hypothesis:} self-supervised pretraining should help, most of all
+      when labels are scarce
+\item \textbf{Setup:} pretrain on unlabeled mouse (test recording held out) $\to$
+      fine-tune at 10--100\% labels vs from-scratch; Cellpose = off-the-shelf
+      baseline \cite{stringer2021cellpose}
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{itemize}\itemsep=0.25em
+\item \textbf{Metrics:} Dice (pixel overlap) + detection F1 (did we find each
+      neuron?)
+\item \textbf{Result:} both far beat Cellpose, but \textbf{SSL does not beat
+      from-scratch}, and \textbf{detection F1 stays low for all} $\to$ separating
+      individual neurons is the open problem
+\end{itemize}
+\end{column}
+\end{columns}
+}
+\end{frame}
