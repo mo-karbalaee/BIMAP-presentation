@@ -19,6 +19,7 @@ Bullets (render exactly these, terse):
 - Two modes: **train** new models, **infer** on new recordings
 - Modular, swappable stages; segmenter = our **JEPA** model or a **Cellpose** baseline `\cite{stringer2021cellpose}`
 - Every run logged (Dice, detection F1); checkpoints versioned, never overwritten
+- **Pip-installable**: use it as a Python package, not copy-pasted code
 - Reproducible: one config file, no hardcoded paths, clone and run
 
 Diagram (top, full width):
