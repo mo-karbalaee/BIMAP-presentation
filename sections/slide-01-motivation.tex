@@ -1,36 +1,36 @@
 % ..............................................................................
-% Slide 1 -- Motivation & Problem
+% Slide 1 -- Motivation (why calcium imaging matters, why an automatic tool)
 % Source content: contents/slide-01-motivation.md
 % ------------------------------------------------------------------------------
 \section{Motivation}
 
-\begin{frame}[t]{Reading the brain, one neuron at a time}
-\begin{columns}[T]
+\begin{frame}[t]{Calcium imaging: recording neuronal activity}
+\begin{columns}[c]
 % ---- Left: text ----------------------------------------------------------
-\begin{column}{0.54\textwidth}
+\begin{column}{0.53\textwidth}
 \begin{itemize}
-\item \textbf{Calcium imaging} records brain activity: when a neuron fires,
-      intracellular $\mathrm{Ca}^{2+}$ rises and a fluorescent indicator
-      brightens --- \textbf{active neurons \enquote{light up} over time}
-      (a 2D${}+{}$t video).
-\item To turn this video into science, each neuron's
-      \textbf{soma must be segmented}, then its \textbf{activity trace}
-      ($\Delta F/F$ over time) can be read out.
-\item \textbf{Manual annotation is slow, subjective, and does not scale}
-      --- it is the real bottleneck.
-\item \textbf{Our angle:} raw video is abundant and cheap; labels are scarce
-      and expensive. Can \textbf{self-supervision on unlabeled video} cut how
-      many labels we need?
+\item Calcium imaging lets us see brain activity directly: when a neuron fires,
+      calcium rises and a fluorescent indicator brightens, so active neurons
+      \enquote{light up} over time (a 2D${}+{}$time movie).
+      \cite{grienberger2012calcium}
+\item A key window into how the brain works --- which neurons are active, and
+      when --- used across many species and labs.
+\item But the raw movie is not yet science: every neuron must first be located
+      (segmented) before its activity can be measured.
+\item Doing this by hand does not scale --- manual annotation is slow,
+      subjective, and inconsistent between annotators.
+\item So the value of this project is an automatic segmentation tool that makes
+      calcium-imaging analysis fast, objective, and scalable.
 \end{itemize}
 \end{column}
-% ---- Right: hero image ---------------------------------------------------
-\begin{column}{0.46\textwidth}
+% ---- Right: hero image (vertically centered) -----------------------------
+\begin{column}{0.45\textwidth}
 \centering
 \includegraphics[width=\linewidth]{contents/images/raw-calcium-frame.png}\\[0.4em]
-{\small\itshape Raw calcium imaging: active neurons appear as bright spots on a
- noisy field.}\\[0.3em]
-{\scriptsize Neurofinder benchmark (neurofinder.codeneuro.org), dataset
- \texttt{00.00} --- mouse cortex, Svoboda Lab / Janelia.}
+{\small\itshape Raw calcium imaging --- active neurons appear as bright spots on
+ a noisy field.}\\[0.3em]
+{\scriptsize Source: Neurofinder benchmark, dataset \texttt{00.00} --- mouse
+ cortex, Svoboda Lab / Janelia.\ \cite{peron2015barrel, neurofinder}}
 \end{column}
 \end{columns}
 \end{frame}

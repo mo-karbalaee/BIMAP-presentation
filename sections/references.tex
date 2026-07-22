@@ -1,0 +1,17 @@
+% ..............................................................................
+% References
+% -------
+% Prints every work cited in the deck (via \cite / \autocite / \footcite).
+% Add sources as @article{...} entries in bibliography.bib and cite them by key.
+%
+% - [allowframebreaks] lets a long list flow onto extra slides automatically.
+% - [heading=none] suppresses biblatex's own heading (the frame title already
+%   says "References").
+% - No \section here on purpose: References stays out of the Agenda and gets no
+%   divider slide.
+% ------------------------------------------------------------------------------
+% Always credit the template author, even if never cited inline.
+\nocite{roith2022faubeamer}
+\begin{frame}[allowframebreaks]{References}
+\printbibliography[heading=none]
+\end{frame}
