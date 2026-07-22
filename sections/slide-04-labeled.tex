@@ -1,0 +1,41 @@
+% ..............................................................................
+% Slide 4 -- Labeled data: Neurofinder (mouse)
+% Source content: contents/slide-04-labeled.md  (bullets are FINAL -- render as-is)
+% ------------------------------------------------------------------------------
+\section{Labeled data}
+
+\begin{frame}[t]{Labeled data: Neurofinder (mouse) \cite{neurofinder}}
+\begin{columns}[c]
+% ---- Left: two labeled lists ---------------------------------------------
+\begin{column}{0.56\textwidth}
+{\small\textbf{Advantages}}
+{\small
+\begin{itemize}\itemsep=0.25em
+\item Labeled data, the scarce and expensive resource
+\item 28 movies from 4 labs (19 train / 9 test)
+\item Diverse brain regions, microscopes, indicators, SNR $\to$ generalization
+\end{itemize}}
+\medskip
+
+{\small\textbf{Limitations}}
+{\small
+\begin{itemize}\itemsep=0.25em
+\item Static per-recording footprints, not per-frame labels
+\item $\Rightarrow$ a single frame hides inactive neurons; must aggregate over time
+\item Label definition varies by lab: hand-annotated vs anatomical marker
+\end{itemize}}
+\end{column}
+\hfill%
+% ---- Right: fixed-mask video (~40% width, vertically centered) -----------
+% Flash-free animation (30 frames @ 8 fps): same contours on every frame while
+% the activity flickers -> makes the "static labels" point visually.
+\begin{column}{0.40\textwidth}
+\centering
+\animategraphics[autoplay,loop,width=0.5\textheight]{8}%
+{contents/videos/frames-nfmask/nfmask-}{1}{30}\\[0.3em]
+{\small\itshape Same fixed mask on every frame; only the activity changes}\\[0.2em]
+{\scriptsize Neurofinder \texttt{00.00}, mouse cortex, Svoboda Lab / Janelia
+ \cite{peron2015barrel}}
+\end{column}
+\end{columns}
+\end{frame}
