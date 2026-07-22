@@ -131,31 +131,6 @@ Summer Semester 2026%
 \newcommand{\colorcite}[3]{{\hypersetup{citecolor=#1}{\cite[#2]{#3}}}} 
 % ------------------------------------------------
 % ================================================
-% Spotlight outline
-% ------------------------------------------------
-% On the section-divider slides (\tableofcontents[currentsection]) fade each
-% entry by its distance from the current section: current = full, one
-% before/after = dim, everything further fades into the abyss.
-\makeatletter
-% Spotlight window around the current section:
-%   current = full (uses the non-shaded template, untouched below)
-%   +/-1    = 50% faded  (opacity 0.5)
-%   +/-2    = 75% faded  (opacity 0.25)
-%   beyond  = hidden entirely (no line, no space) so it can never overflow
-\newcommand{\fau@tocfade}[1]{%
-  \edef\fau@d{\the\numexpr\inserttocsectionnumber-\value{section}\relax}%
-  \ifnum\fau@d<0 \edef\fau@d{\the\numexpr-\fau@d\relax}\fi% |distance|
-  \ifnum\fau@d>2 % outside the window: render nothing
-  \else
-    \ifnum\fau@d=1 \def\fau@op{0.5}\else\def\fau@op{0.25}\fi
-    {\pgfsetfillopacity{\fau@op}\usebeamertemplate{#1}\pgfsetfillopacity{1}}%
-  \fi
-}
-\setbeamertemplate{section in toc shaded}{\fau@tocfade{section in toc}}
-\setbeamertemplate{subsection in toc shaded}{\fau@tocfade{subsection in toc}}
-\makeatother
-
-% ================================================
 % The main document
 % ------------------------------------------------
 \begin{document}

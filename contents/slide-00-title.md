@@ -2,7 +2,7 @@
 
 ## On-slide content
 
-*Subtitle:* Neural segmentation pipeline for calcium imaging
+*Subtitle:* Neural soma segmentation pipeline for calcium imaging
 
 Author: Mohammad Karbalaee
 
