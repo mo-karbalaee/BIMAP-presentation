@@ -2,7 +2,7 @@ Generate slide 7 of the NEUROSEG presentation, the H1 slide (right after the JEP
 
 You are the LaTeX manager. The content below is FINAL. Render the bullets as-is: short, minimal, one idea each. Do NOT expand into sentences or paragraphs, and do not add content. This is a talk, not a paper.
 
-This is a one-slide hypothesis: it must state the hypothesis, name the metrics, and show the result, all here. Honest framing: our models clearly beat off-the-shelf Cellpose, but self-supervised pretraining does NOT beat plain supervised training, and instance-level detection stays hard for everyone.
+This is a one-slide hypothesis: state the hypothesis, name the metrics, show the results. Keep it factual — the critical interpretation (statistical robustness, single seed, within-recording, "is the gap real") lives on a later critique slide, NOT here.
 
 Layout:
 - Figure across the top, full width (two side-by-side panels).
@@ -20,7 +20,7 @@ Bullets (render exactly these, terse):
 - **Fine-tune + test:** hold out one labeled recording, split it 80/20 → fine-tune at 10–100% of the train, test on the fixed 20%
 - **Baselines:** from-scratch (same split) + off-the-shelf Cellpose `\cite{stringer2021cellpose}`
 - **Metrics:** Dice (pixel overlap) + detection F1 (did we find each neuron?)
-- **Result:** both far beat Cellpose, but **SSL does not beat from-scratch**, and **detection F1 stays low for all** → separating individual neurons is the open problem
+- **Result:** JEPA-pretrained and from-scratch both far exceed off-the-shelf Cellpose, and perform comparably to each other across all label fractions
 
 Figure (top, full width):
 
