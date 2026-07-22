@@ -7,7 +7,7 @@
 \begin{frame}[t]{H1 --- Does self-supervision help when labels are scarce?}
 % ---- Figure: full width across the top (Dice | detection F1) -------------
 \centering
-\includegraphics[width=\linewidth,height=0.5\textheight,keepaspectratio]%
+\includegraphics[width=\linewidth,height=0.42\textheight,keepaspectratio]%
 {contents/images/h1-results.png}
 
 \vfill
@@ -15,7 +15,7 @@
 {\footnotesize
 \begin{columns}[t]
 \begin{column}{0.5\textwidth}
-\begin{itemize}\itemsep=0.2em
+\begin{itemize}\itemsep=0.1em
 \item \textbf{Hypothesis:} self-supervised pretraining should help, most of all
       when labels are scarce
 \item \textbf{Pretrain:} self-supervised (JEPA) on the calcium video with labels
@@ -25,7 +25,7 @@
 \end{itemize}
 \end{column}
 \begin{column}{0.5\textwidth}
-\begin{itemize}\itemsep=0.2em
+\begin{itemize}\itemsep=0.1em
 \item \textbf{Baselines:} from-scratch (same split) + off-the-shelf Cellpose
       \cite{stringer2021cellpose}
 \item \textbf{Metrics:} Dice (pixel overlap) + detection F1 (did we find each
