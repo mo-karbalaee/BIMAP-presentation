@@ -1,28 +1,20 @@
 # Slide 1 — Motivation & Problem
 
-## On-slide content
+## Slide title
 
-**Title:** Reading the brain, one neuron at a time — why segmentation is the bottleneck
+Reading the brain, one neuron at a time
 
-- Calcium imaging makes **active neurons "light up"**: when a neuron fires, intracellular Ca²⁺ rises and a fluorescent indicator brightens (2D + time).
-- To turn that video into science, you must **segment each neuron's soma** → then read its **activity trace** (ΔF/F over time).
-- The catch: **manual annotation is slow, subjective, and doesn't scale** — it is the real bottleneck.
-- **Goal:** an automatic pipeline that segments active neurons — and, as a research question, whether **self-supervision on abundant *unlabeled* video** can reduce how many labels we need.
+## Body (render as the slide's text)
 
-## Figure / visual
+- **Calcium imaging** records brain activity: when a neuron fires, intracellular Ca²⁺ rises and a fluorescent indicator brightens — **active neurons "light up" over time** (2D + t video).
+- To turn this video into science, each neuron's **soma must be segmented**, then its **activity trace** (ΔF/F over time) can be read out.
+- **Manual annotation is slow, subjective, and does not scale** — it is the real bottleneck.
+- **Our angle:** raw video is abundant and cheap; labels are scarce and expensive. Can **self-supervision on unlabeled video** cut how many labels we need?
 
-- Left: a raw calcium-imaging frame (grayscale) → right: the same frame with neuron masks + a couple of ΔF/F traces underneath. One arrow: *video → masks → traces.*
-- Source: we can pull a real frame + trace from an inference run (`output/H1_infer/...`). Flag if you want me to render this composite.
+## Figure
 
-## Speaker notes (~1 min)
-
-- Open with the biology in one breath: neurons fire → Ca²⁺ rises → fluorescence; so a movie of a brain region shows *who is active, when*.
-- The scientific payload isn't the pixels, it's the **per-neuron activity traces** — and you can't get those without first knowing *where each neuron is*. That's segmentation.
-- Make the pain concrete: labeling somas by hand is hours per recording, annotator-dependent, and there are many recordings/species. So the field needs automation, and labels are the scarce resource.
-- Land the thesis: *labels are expensive, raw video is cheap and abundant — so can self-supervised learning exploit the cheap thing to save the expensive thing?* That framing motivates all three hypotheses later.
-
-## Q&A prep
-
-- **Why not just use Cellpose / classical methods?** They're strong generic baselines (and we include Cellpose in the pipeline), but they're not activity-aware and don't leverage unlabeled calcium video; our question is specifically whether SSL representations help.
-- **Why is manual labeling "subjective"?** Neuron boundaries in noisy, overlapping fields are genuinely ambiguous; different annotators disagree, which also caps achievable Dice.
-- **Unbiased vs activity-based segmentation?** The brief names both families; our method is learning-based and can use temporal (activity) information via the video input.
+- **File:** `images/raw-calcium-frame.png`
+- **Content:** a raw calcium-imaging frame (mouse, Neurofinder 00.00), contrast-normalized. Bright blobs = active neuron somas; dark background = inactive tissue.
+- **Caption:** *Raw calcium imaging: active neurons appear as bright spots on a noisy field.*
+- **Source/credit (render as small text under the image):** Neurofinder benchmark (neurofinder.codeneuro.org), dataset `00.00` — mouse cortex, Svoboda Lab / Janelia.
+- **Placement:** right half (hero image); text bullets on the left.
