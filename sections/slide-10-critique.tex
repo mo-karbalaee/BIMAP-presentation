@@ -1,40 +1,39 @@
 % ..............................................................................
-% Slide 10 -- Reading our own results critically (self-critique + limitations)
+% Slide 10 -- What we'd criticize in our own results (self-critique)
 % Source content: contents/slide-10-critique.md  (bullets are FINAL -- render as-is)
 % ------------------------------------------------------------------------------
 \section{Critique}
 
-\begin{frame}[t]{Reading our own results critically}
+\begin{frame}[t]{What we'd criticize in our own results}
 {\footnotesize
 \begin{columns}[t]
 % ---- Statistics ----------------------------------------------------------
 \begin{column}{0.5\textwidth}
-\textbf{Statistics --- significant $\neq$ meaningful}
+\textbf{Our statistics don't prove what they seem to}
 \begin{itemize}\itemsep=0.25em
-\item H1: JEPA vs supervised is statistically significant ($p \approx 10^{-20}$)
-      but the effect is \textbf{tiny ($\Delta \approx 0.02$)} and flips with
-      label fraction and resolution $\to$ \textbf{no robust advantage}
-\item H3: with millions of pairs, $p$ is meaningless $\to$ report
-      \textbf{effect size}: Cohen's $d$ = SSL 0.66, supervised 1.45, random 0.14
-\item \textbf{Single training seed} $\to$ we measure evaluation variance, not
-      training variance
+\item The JEPA vs supervised gap is statistically significant, yet \textbf{tiny
+      ($\Delta \approx 0.02$) and flips} with label fraction and resolution
+      $\to$ significance here is misleading, not a real effect
+\item For H3, $p$-values are meaningless at millions of pairs $\to$ only
+      \textbf{effect size} is honest (Cohen's $d$: SSL 0.66, supervised 1.45,
+      random 0.14)
+\item Every result is a \textbf{single training seed} $\to$ we cannot separate a
+      real effect from training noise
 \end{itemize}
 \end{column}
 \hfill%
-% ---- Limitations ---------------------------------------------------------
+% ---- What results do NOT show --------------------------------------------
 \begin{column}{0.5\textwidth}
-\textbf{Limitations}
+\textbf{What our results do NOT show}
 \begin{itemize}\itemsep=0.25em
-\item Dice and mIoU are redundant (monotonically linked) $\to$ we added
-      \textbf{detection F1}, which stays $\sim$0.2 for every model $\to$
-      \textbf{separating individual neurons is unsolved}
-\item We beat off-the-shelf Cellpose (Dice 0.28, F1 0.17), but we are
-      \textbf{trained on the target} while Cellpose is \textbf{zero-shot and
-      untuned}
-\item Evaluation is \textbf{within-recording} (train and test on the same
-      recording) $\to$ not yet cross-recording generalization
-\item SSL pretraining \textbf{under-converges} (validation loss diverges) $\to$
-      our SSL results are a floor, not a ceiling
+\item \textbf{Dice and mIoU are redundant} --- pixel overlap can look strong
+      while neuron \textit{detection} stays poor (detection F1 $\sim$0.2 for all)
+\item Our win over Cellpose is \textbf{not apples-to-apples} --- we are trained
+      on the target, Cellpose is zero-shot and untuned
+\item We \textbf{train and test on the same recording} $\to$ cross-recording
+      generalization is unproven
+\item Our SSL pretraining \textbf{never converges} (validation loss diverges)
+      $\to$ these are floor numbers, not the method's real potential
 \end{itemize}
 \end{column}
 \end{columns}
