@@ -6,7 +6,7 @@ Message of this slide: we also have unlabeled cross-species calcium video (Droso
 
 Layout:
 - Bullets across the top (compact).
-- Three short preview videos in a single row across the lower two thirds, each with a small label underneath.
+- Two short preview videos side by side across the lower two thirds, each with a species label underneath.
 - Keep the title in the top title area; nothing may collide with the footer band.
 
 Slide title:
@@ -17,15 +17,13 @@ Bullets (render exactly these, terse):
 
 - Provided by S. Hauser: Drosophila larvae + zebrafish calcium video
 - No labels, just raw video → ideal for self-supervised pretraining
-- Formats: multi-frame TIFF + Zeiss CZI; zebrafish = 6-plane ETL volumes
-- Makes the cross-species question possible (H2)
+- Two non-mouse species → makes the cross-species question possible (H2)
 
-Media — a row of three looping preview clips (equal height, left to right). Under each, a small label:
+Media — two looping preview clips side by side (equal height). Under each, a species label:
 
-- `contents/videos/drosophila-czi.mp4` — label: *Drosophila (CZI)*
-- `contents/videos/drosophila-tif.mp4` — label: *Drosophila (TIFF)*
-- `contents/videos/zebrafish-etl.mp4` — label: *Zebrafish (ETL, one plane)*
+- `contents/videos/drosophila-czi.mp4` — label: *Drosophila*
+- `contents/videos/zebrafish-etl.mp4` — label: *Zebrafish*
 
-For each, if video embedding is not practical, use the matching still as a poster/fallback: `contents/images/drosophila-czi.png`, `contents/images/drosophila-tif.png`, `contents/images/zebrafish-etl.png`.
+If video embedding is not practical, use the matching still as a poster/fallback: `contents/images/drosophila-czi.png`, `contents/images/zebrafish-etl.png`.
 
-Single source line under the row (tiny): Unlabeled calcium imaging provided by S. Hauser (AnKi Lab). No public citation.
+Single source line under the row (tiny): Unlabeled calcium imaging provided by S. Hauser (AnKi Lab).

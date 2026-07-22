@@ -5,14 +5,20 @@
 \subsection{Unlabeled data}
 
 \begin{frame}[t]{Unlabeled data: \textit{Drosophila} + zebrafish}
-% ---- Bullets across the top (compact) ------------------------------------
-{\footnotesize
+% ---- Bullets across the top --------------------------------------------
+% Wrapped in a full-width column so they land in the body (not glued to the
+% title) and inherit the normal black text color instead of the title color.
+\begin{columns}
+\begin{column}{0.97\textwidth}
+{\footnotesize\color{black}
 \begin{itemize}\itemsep=0.15em
 \item Provided by S.~Hauser: \textit{Drosophila} larvae + zebrafish calcium video
 \item No labels, just raw video $\to$ ideal for self-supervised pretraining
 \item Formats: multi-frame TIFF + Zeiss CZI; zebrafish = 6-plane ETL volumes
 \item Makes the cross-species question possible (H2)
 \end{itemize}}
+\end{column}
+\end{columns}
 
 \vfill
 % ---- Row of three looping preview clips (equal height) -------------------
