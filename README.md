@@ -8,6 +8,8 @@ A LaTeX beamer template according to the 2021 [style guide](https://www.intern.f
 
 The given template allows you to create LaTeX presentations with the [beamer class](https://ctan.org/pkg/beamer?lang=en) in the corporate style of FAU.
 
+> :movie_camera: **Viewing the embedded videos:** Some slides contain looping videos. To see them play, **install [Adobe Acrobat Reader](https://get.adobe.com/reader/) and open the compiled PDF in Acrobat** (ideally in full-screen/presentation mode). Other viewers — the Overleaf preview, web browsers, and macOS Preview — only show a static frame instead of the video.
+
 ## :gear: Usage and Most Important Options
 
 To use this template you can either clone this repository or download the code. The example document should provide a basic introduction how to set up a document with this template. We are only going over the most important steps here.

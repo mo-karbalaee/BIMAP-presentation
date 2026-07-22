@@ -7,7 +7,7 @@
 \begin{frame}[t]{Calcium imaging: recording neuronal activity}
 \begin{columns}[c]
 % ---- Left: terse bullets -------------------------------------------------
-\begin{column}{0.60\textwidth}
+\begin{column}{0.56\textwidth}
 \begin{itemize}
 \item Calcium imaging: a direct readout of brain activity
       \cite{grienberger2012calcium}
@@ -20,11 +20,14 @@
 \end{itemize}
 \end{column}
 \hfill%
-% ---- Right: image ~1/3 slide width, vertically centered ------------------
-\begin{column}{0.35\textwidth}
+% ---- Right: looping raw-calcium video (~40% width), vertically centered --
+% Flash-free animation (100 frames @ 10 fps). Autoplays/loops in Acrobat;
+% shows the first frame as a static poster in other viewers.
+\begin{column}{0.40\textwidth}
 \centering
-\includegraphics[width=\linewidth]{contents/images/raw-calcium-frame.png}\\[0.4em]
-{\small\itshape Raw calcium imaging: active neurons as bright spots}\\[0.3em]
+\animategraphics[autoplay,loop,width=0.55\textheight]{10}%
+{contents/videos/frames-raw/raw-}{1}{100}\\[0.4em]
+{\small\itshape Raw calcium imaging: neurons brighten as they fire}\\[0.3em]
 {\scriptsize Neurofinder \texttt{00.00}, mouse cortex, Svoboda Lab / Janelia
  \cite{peron2015barrel, neurofinder}}
 \end{column}

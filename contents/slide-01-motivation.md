@@ -21,8 +21,9 @@ Bullets (render exactly these, terse):
 - Manual annotation: slow, subjective, doesn't scale
 - **Goal:** automatic segmentation → fast, objective, scalable
 
-Image (right side, about one third slide width, vertically centered):
+Media (right side, about 40% slide width, vertically centered):
 
-- File: `contents/images/raw-calcium-frame.png`
-- Caption (italic, small): *Raw calcium imaging: active neurons as bright spots*
+- Primary: embed the video `contents/videos/raw-calcium.mp4` (a raw calcium recording, looping; you can see neurons brighten as they fire). Use media9 (or the template's video method); set the still below as the poster frame.
+- Fallback still (if video embedding is not practical): `contents/images/raw-calcium-frame.png`
+- Caption (italic, small): *Raw calcium imaging: neurons brighten as they fire*
 - Source line (tiny, under caption): Neurofinder 00.00, mouse cortex, Svoboda Lab / Janelia `\cite{peron2015barrel, neurofinder}`
