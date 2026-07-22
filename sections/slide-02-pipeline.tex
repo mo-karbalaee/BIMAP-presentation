@@ -7,14 +7,16 @@
 \begin{frame}[t]{An end-to-end pipeline: train, infer, segment}
 % ---- Diagram: full width across the top ----------------------------------
 \centering
-\includegraphics[width=\linewidth,height=0.62\textheight,keepaspectratio]%
+\includegraphics[width=\linewidth,height=0.5\textheight,keepaspectratio]%
 {contents/images/pipeline.png}
 
 \vfill
-% ---- Bullets: lower third, two compact columns ---------------------------
+% ---- Bullets: lower third, two compact columns (smaller + tighter) -------
+{\small
+\setlength{\leftmargini}{1.2em}%
 \begin{columns}[t]
 \begin{column}{0.5\textwidth}
-\begin{itemize}
+\begin{itemize}\itemsep=0.25em
 \item Not a script: one full \textbf{pipeline}, single entry point
 \item Two modes: \textbf{train} new models, \textbf{infer} on new recordings
 \item Modular, swappable stages; segmenter = our \textbf{JEPA} model or a
@@ -22,11 +24,12 @@
 \end{itemize}
 \end{column}
 \begin{column}{0.5\textwidth}
-\begin{itemize}
+\begin{itemize}\itemsep=0.25em
 \item Every run logged (Dice, mIoU); checkpoints versioned, never overwritten
 \item Reproducible: one config file, no hardcoded paths, clone and run
 \item Meets and exceeds the Phase 0 MVP (load $\to$ segment $\to$ activity traces)
 \end{itemize}
 \end{column}
 \end{columns}
+}
 \end{frame}
