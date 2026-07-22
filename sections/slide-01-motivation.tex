@@ -1,0 +1,36 @@
+% ..............................................................................
+% Slide 1 -- Motivation & Problem
+% Source content: contents/slide-01-motivation.md
+% ------------------------------------------------------------------------------
+\section{Motivation}
+
+\begin{frame}[t]{Reading the brain, one neuron at a time}
+\begin{columns}[T]
+% ---- Left: text ----------------------------------------------------------
+\begin{column}{0.54\textwidth}
+\begin{itemize}
+\item \textbf{Calcium imaging} records brain activity: when a neuron fires,
+      intracellular $\mathrm{Ca}^{2+}$ rises and a fluorescent indicator
+      brightens --- \textbf{active neurons \enquote{light up} over time}
+      (a 2D${}+{}$t video).
+\item To turn this video into science, each neuron's
+      \textbf{soma must be segmented}, then its \textbf{activity trace}
+      ($\Delta F/F$ over time) can be read out.
+\item \textbf{Manual annotation is slow, subjective, and does not scale}
+      --- it is the real bottleneck.
+\item \textbf{Our angle:} raw video is abundant and cheap; labels are scarce
+      and expensive. Can \textbf{self-supervision on unlabeled video} cut how
+      many labels we need?
+\end{itemize}
+\end{column}
+% ---- Right: hero image ---------------------------------------------------
+\begin{column}{0.46\textwidth}
+\centering
+\includegraphics[width=\linewidth]{contents/images/raw-calcium-frame.png}\\[0.4em]
+{\small\itshape Raw calcium imaging: active neurons appear as bright spots on a
+ noisy field.}\\[0.3em]
+{\scriptsize Neurofinder benchmark (neurofinder.codeneuro.org), dataset
+ \texttt{00.00} --- mouse cortex, Svoboda Lab / Janelia.}
+\end{column}
+\end{columns}
+\end{frame}
