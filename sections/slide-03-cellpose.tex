@@ -1,0 +1,36 @@
+% ..............................................................................
+% Slide 3 -- Cellpose: the pipeline's default segmenter (and our baseline)
+% Source content: contents/slide-03-cellpose.md  (bullets are FINAL -- render as-is)
+%
+% NOTE: the source suggests embedding contents/videos/cellpose-segmentation.mp4
+% via media9. Embedded PDF video only plays in Adobe Acrobat/Reader, not in the
+% Overleaf preview or browsers, so we use the still (cellpose-frame.png) here as
+% the reliable default. See chat for how to add a media9 video layer on top.
+% ------------------------------------------------------------------------------
+\section{Baseline}
+
+\begin{frame}[t]{Cellpose: the pipeline's default segmenter}
+\begin{columns}[c]
+% ---- Left: terse bullets -------------------------------------------------
+\begin{column}{0.52\textwidth}
+\begin{itemize}
+\item Cellpose: a pretrained, generalist deep-learning cell segmenter
+      \cite{stringer2021cellpose}
+\item Ships \textbf{pre-installed} as the pipeline's \textbf{default inference
+      model}
+\item Segment any recording out of the box, no training required
+\item Serves as our \textbf{baseline}: what our learned models must beat
+\end{itemize}
+\end{column}
+\hfill%
+% ---- Right: segmentation still (vertically centered) ---------------------
+\begin{column}{0.46\textwidth}
+\centering
+\includegraphics[width=\linewidth]{contents/images/cellpose-frame.png}\\[0.4em]
+{\small\itshape Cellpose segmentation, run through our pipeline (default
+ inference model)}\\[0.3em]
+{\scriptsize Model: Cellpose \cite{stringer2021cellpose}. Data: Neurofinder
+ \texttt{00.00}, mouse cortex \cite{peron2015barrel, neurofinder}.}
+\end{column}
+\end{columns}
+\end{frame}
