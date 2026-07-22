@@ -1,0 +1,36 @@
+% ..............................................................................
+% Slide 6 -- Method: self-supervised learning with JEPA
+% Source content: contents/slide-06-method.md  (bullets are FINAL -- render as-is)
+% ------------------------------------------------------------------------------
+\section{Method}
+
+\begin{frame}[t]{Self-supervised learning with JEPA}
+% ---- Diagram: full width across the top ----------------------------------
+\centering
+\includegraphics[width=\linewidth,height=0.5\textheight,keepaspectratio]%
+{contents/images/jepa.png}
+
+\vfill
+% ---- Bullets: lower third, two compact columns ---------------------------
+{\small
+\begin{columns}[t]
+\begin{column}{0.5\textwidth}
+\begin{itemize}\itemsep=0.25em
+\item Self-supervision: learn from raw, \textbf{unlabeled} data by predicting
+      hidden parts of it
+\item The engine behind modern AI: LLMs learn by predicting the next word
+\item \textbf{JEPA}: predict in \textbf{latent space, not pixels} $\to$ abstract
+      structure, ignores pixel noise \cite{assran2023ijepa}
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{itemize}\itemsep=0.25em
+\item Our model: context encoder + EMA target encoder + predictor $\to$
+      pretrain on unlabeled video, then a light segmentation head
+\item \textbf{Our contribution}: adapt JEPA-style self-supervision to
+      calcium-imaging segmentation
+\end{itemize}
+\end{column}
+\end{columns}
+}
+\end{frame}
