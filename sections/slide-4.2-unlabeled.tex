@@ -1,0 +1,40 @@
+% ..............................................................................
+% Slide 4.2 -- Unlabeled data: Drosophila + zebrafish (self-supervised pretraining)
+% Source content: contents/slide-4.2-unlabeled.md  (bullets are FINAL -- render as-is)
+% ------------------------------------------------------------------------------
+\subsection{Unlabeled data}
+
+\begin{frame}[t]{Unlabeled data: \textit{Drosophila} + zebrafish}
+% ---- Bullets across the top --------------------------------------------
+% Wrapped in a full-width column so they land in the body (not glued to the
+% title) and inherit the normal black text color instead of the title color.
+\begin{columns}
+\begin{column}{0.97\textwidth}
+{\footnotesize\color{black}
+\begin{itemize}\itemsep=0.2em
+\item Provided by S.~Hauser: \textit{Drosophila} larvae + zebrafish calcium video
+\item No labels, just raw video $\to$ ideal for self-supervised pretraining
+\item Two non-mouse species $\to$ makes the cross-species question possible (H2)
+\end{itemize}}
+\end{column}
+\end{columns}
+
+\vfill
+% ---- Two looping preview clips side by side (equal height) ---------------
+% Flash-free animations @ 8 fps; static poster frame in non-Acrobat viewers.
+\begin{columns}[t]
+\begin{column}{0.48\textwidth}\centering
+\animategraphics[autoplay,loop,height=0.42\textheight]{8}%
+{contents/videos/frames-dczi/dczi-}{1}{20}\\[0.3em]
+{\scriptsize\itshape Drosophila}
+\end{column}
+\begin{column}{0.48\textwidth}\centering
+\animategraphics[autoplay,loop,height=0.42\textheight]{8}%
+{contents/videos/frames-zetl/zetl-}{1}{20}\\[0.3em]
+{\scriptsize\itshape Zebrafish}
+\end{column}
+\end{columns}
+
+\vfill
+\centering{\tiny Unlabeled calcium imaging provided by S.~Hauser (AnKi Lab).}
+\end{frame}
