@@ -20,7 +20,7 @@ Bullets (render exactly these, terse):
 - **Compared to:** same-species SSL (mouse pretraining) and from-scratch
 - **Leakage-free:** the encoder is pretrained on a different species, never sees the mouse test set
 - **Metric:** Dice on held-out mouse, across label fractions
-- **Result:** cross-species SSL **matches same-species SSL** at every fraction → representations transfer across species with **no meaningful penalty**
+- **Result:** cross-species SSL **nearly matches same-species SSL** at every fraction (gap ≈ 0.01) → representations transfer across species with **no meaningful penalty**
 
 Figure (right, about half slide width):
 

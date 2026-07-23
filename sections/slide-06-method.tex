@@ -20,13 +20,15 @@
       hidden parts of it
 \item The engine behind modern AI: LLMs learn by predicting the next word
 \item \textbf{JEPA}: predict in \textbf{latent space, not pixels} $\to$ abstract
-      structure, ignores pixel noise \cite{assran2023ijepa}
+      structure, ignores pixel noise
+      \cite{lecun2022path, assran2023ijepa, bardes2024vjepa}
 \end{itemize}
 \end{column}
 \begin{column}{0.5\textwidth}
 \begin{itemize}\itemsep=0.25em
-\item My model: context encoder + EMA target encoder + predictor $\to$
-      pretrain on unlabeled video, then a light segmentation head
+\item My model: context encoder + EMA target encoder \cite{grill2020byol} +
+      predictor, with variance-covariance regularization \cite{bardes2022vicreg}
+      $\to$ pretrain on unlabeled video, then a light segmentation head
 \item \textbf{My contribution}: adapt JEPA-style self-supervision to
       calcium-imaging segmentation
 \end{itemize}

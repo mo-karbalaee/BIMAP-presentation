@@ -17,8 +17,8 @@ Bullets (render exactly these, terse):
 
 - Self-supervision: learn from raw, **unlabeled** data by predicting hidden parts of it
 - The engine behind modern AI: LLMs learn by predicting the next word
-- **JEPA**: predict in **latent space, not pixels** → abstract structure, ignores pixel noise `\cite{assran2023ijepa}`
-- My model: context encoder + EMA target encoder + predictor → pretrain on unlabeled video, then a light segmentation head
+- **JEPA**: predict in **latent space, not pixels** → abstract structure, ignores pixel noise `\cite{lecun2022path, assran2023ijepa, bardes2024vjepa}`
+- My model: context encoder + EMA target encoder `\cite{grill2020byol}` + predictor, with variance-covariance regularization `\cite{bardes2022vicreg}` → pretrain on unlabeled video, then a light segmentation head
 - **My contribution**: adapt JEPA-style self-supervision to calcium-imaging segmentation
 
 Diagram (top, full width):

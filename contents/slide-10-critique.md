@@ -1,8 +1,8 @@
 Generate slide 10 of the NEUROSEG presentation, the critique + limitations slide (right after H3, before the conclusion).
 
-You are the LaTeX manager. Render this as a presentation slide: minimal text, telegraphic. Use the table below as the centerpiece. Do NOT turn cells into sentences. This is a talk, not a paper.
+You are the LaTeX manager. Render this as a presentation slide: minimal text, telegraphic. Use the table as the centerpiece. Do NOT turn cells into sentences. This is a talk, not a paper.
 
-PURPOSE: show that I can critically diagnose the weaknesses in my OWN results — recognition of issues, not fixes.
+PURPOSE: show that I can critically diagnose the weaknesses in my OWN results — recognition of issues, not fixes. The table is organized BY hypothesis so each critique clearly maps to H1, H2, or H3.
 
 Slide title:
 
@@ -10,17 +10,18 @@ Slide title:
 
 Line under the title (small, states the methods used):
 
-Statistical tests: paired Wilcoxon (H1), Mann-Whitney U + Cohen's d + bootstrap CI (H3)
+Statistical tests: paired Wilcoxon `\cite{wilcoxon1945}` (H1, H2), Mann-Whitney U `\cite{mannwhitney1947}` + Cohen's d `\cite{cohen1988}` + bootstrap CI `\cite{efron1979}` (H3)
 
-Main content — a compact two-column table (keep cells to a few words):
+Main content — a three-row table, one row per hypothesis (keep cells to a few words):
 
-| Looks like | Honest catch |
-|---|---|
-| SSL ≈ supervised (H1) | significant, but Δ≈0.02 and flips → not real |
-| SSL tells neurons apart (H3) | only medium effect: d = 0.66 vs 1.45 supervised |
-| Beats Cellpose | I trained on the target; Cellpose is zero-shot |
-| Strong Dice | detection F1 ≈ 0.2 → neurons not separated |
+| | Claim | Honest catch |
+|---|---|---|
+| **H1** | SSL beats supervised | significant but Δ≈0.02 and flips → not a real effect |
+| **H2** | no cross-species penalty | calcium patterns look alike across species → transfer reflects dataset similarity, not learned segmentation |
+| **H3** | SSL tells neurons apart | real but only medium: Cohen's d 0.66 (supervised 1.45) |
 
-Footer line (small, one line):
+Below the table, a short list headed "Across all three:":
 
-Also: single seed · train + test on one recording · SSL pretraining under-converged
+- Dice and mIoU are redundant → detection F1 ≈ 0.2 for every model → neurons not separated
+- "Beats Cellpose" is not fair: I train on the target, Cellpose is zero-shot
+- single seed · train + test on one recording · SSL pretraining under-converges

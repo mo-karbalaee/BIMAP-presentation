@@ -1,5 +1,5 @@
 % ..............................................................................
-% Slide 10 -- How solid are these results? (self-critique, table form)
+% Slide 10 -- How solid are these results? (self-critique, per-hypothesis table)
 % Source content: contents/slide-10-critique.md  (FINAL -- render as-is)
 % ------------------------------------------------------------------------------
 \section{Critique}
@@ -10,24 +10,34 @@
 \begin{column}{0.98\textwidth}
 \color{black}\centering
 % ---- Methods line under the title ----------------------------------------
-{\small Statistical tests: paired Wilcoxon (H1),
- Mann--Whitney~U + Cohen's $d$ + bootstrap CI (H3)}\\[1.4em]
-% ---- Looks like / Honest catch table -------------------------------------
-{\small\renewcommand{\arraystretch}{1.5}%
-\begin{tabular}{@{}p{0.40\textwidth}@{\hspace{2em}}p{0.50\textwidth}@{}}
-\textbf{Looks like} & \textbf{Honest catch}\\[0.2em]
+{\footnotesize Statistical tests: paired Wilcoxon \cite{wilcoxon1945} (H1, H2),
+ Mann--Whitney~U \cite{mannwhitney1947} + Cohen's $d$ \cite{cohen1988} +
+ bootstrap CI \cite{efron1979} (H3)}\\[1.2em]
+% ---- Per-hypothesis table ------------------------------------------------
+{\footnotesize\renewcommand{\arraystretch}{1.4}%
+\begin{tabular}{@{}c@{\hspace{1.2em}}p{0.30\textwidth}@{\hspace{1.2em}}p{0.48\textwidth}@{}}
+& \textbf{Claim} & \textbf{Honest catch}\\[0.2em]
 \hline\\[-0.85em]
-SSL $\approx$ supervised (H1) & significant, but $\Delta \approx 0.02$ and flips
-                                $\to$ not real\\
-SSL tells neurons apart (H3)  & only medium effect: $d = 0.66$ vs $1.45$
-                                supervised\\
-Beats Cellpose                & I trained on the target; Cellpose is zero-shot\\
-Strong Dice                   & detection F1 $\approx 0.2$ $\to$ neurons not
-                                separated\\
-\end{tabular}}\\[1.4em]
-% ---- Footer caveats line -------------------------------------------------
-{\small Also: single seed $\cdot$ train + test on one recording $\cdot$
- SSL pretraining under-converged}
+\textbf{H1} & SSL beats supervised & significant but $\Delta \approx 0.02$ and
+              flips $\to$ not a real effect\\
+\textbf{H2} & no cross-species penalty & calcium patterns look alike across
+              species $\to$ transfer reflects dataset similarity, not learned
+              segmentation\\
+\textbf{H3} & SSL tells neurons apart & real but only medium: Cohen's $d$ 0.66
+              (supervised 1.45)\\
+\end{tabular}}\\[1.2em]
+% ---- Across-all-three list -----------------------------------------------
+\begin{minipage}{0.9\textwidth}
+{\footnotesize\textbf{Across all three:}
+\begin{itemize}\itemsep=0.15em
+\item Dice and mIoU are redundant $\to$ detection F1 $\approx 0.2$ for every
+      model $\to$ neurons not separated
+\item \enquote{Beats Cellpose} is not fair: I train on the target, Cellpose is
+      zero-shot
+\item single seed $\cdot$ train + test on one recording $\cdot$ SSL pretraining
+      under-converges
+\end{itemize}}
+\end{minipage}
 \end{column}
 \end{columns}
 \end{frame}

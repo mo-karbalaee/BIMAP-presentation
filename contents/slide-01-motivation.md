@@ -15,7 +15,7 @@ Slide title:
 Bullets (render exactly these, terse):
 
 - Calcium imaging: a direct readout of brain activity `\cite{grienberger2012calcium}`
-- Neuron fires → Ca²⁺ rises → indicator brightens → active neurons "light up" (2D + time)
+- Neuron fires → Ca²⁺ rises → indicator brightens → active neurons "light up" (2D + time) `\cite{chen2013gcamp6}`
 - Records large populations of neurons in living, behaving animals
 - Raw movie ≠ science: each neuron must be **segmented** first
 - Manual annotation: slow, subjective, doesn't scale
