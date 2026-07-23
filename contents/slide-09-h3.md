@@ -24,4 +24,4 @@ Figure (top, full width):
 
 - File: `contents/images/h3-stability.png`
 - Left panel: within- vs between-neuron similarity for SSL / supervised / random. Right panel: the gap (within − between) for each; SSL 0.057, supervised 0.208, random 0.012.
-- This is our own figure; no external source credit needed.
+- This is my own figure; no external source credit needed.

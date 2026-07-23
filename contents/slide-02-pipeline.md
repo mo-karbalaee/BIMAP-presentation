@@ -17,7 +17,7 @@ Bullets (render exactly these, terse):
 
 - Not a script: one full **pipeline**, single entry point
 - Two modes: **train** new models, **infer** on new recordings
-- Modular, swappable stages; segmenter = our **JEPA** model or a **Cellpose** baseline `\cite{stringer2021cellpose}`
+- Modular, swappable stages; segmenter = my **JEPA** model or a **Cellpose** baseline `\cite{stringer2021cellpose}`
 - Every run logged (Dice, detection F1); checkpoints versioned, never overwritten
 - **Pip-installable**: use it as a Python package, not copy-pasted code
 - Reproducible: one config file, no hardcoded paths, clone and run
@@ -26,4 +26,4 @@ Diagram (top, full width):
 
 - File: `contents/images/pipeline.png`
 - It shows two lanes: TRAINING (dataset → JEPA trainer H1/H2/H3 → checkpoint + metrics) and INFERENCE (new recording → load → preprocess → segment → activity traces → visualize).
-- This is our own figure; no external source credit needed.
+- This is my own figure; no external source credit needed.

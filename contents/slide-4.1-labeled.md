@@ -2,7 +2,7 @@ Generate slide 4 of the NEUROSEG presentation, the labeled-data slide (right aft
 
 You are the LaTeX manager. The content below is FINAL. Render the bullets as-is: short, minimal, one idea each. Do NOT expand into sentences or paragraphs, and do not add content. This is a talk, not a paper.
 
-Message of this slide: our labeled benchmark is Neurofinder (mouse). Strength: labeled, large, diverse. Catch: labels are static per-recording footprints (not per-frame) and inconsistently defined.
+Message of this slide: my labeled benchmark is Neurofinder (mouse). Strength: labeled, large, diverse. Catch: labels are static per-recording footprints (not per-frame) and inconsistently defined.
 
 Layout:
 - Left: two short labeled lists, "Advantages" then "Limitations".
@@ -11,12 +11,12 @@ Layout:
 
 Slide title:
 
-> Labeled data: Neurofinder (mouse) `\cite{neurofinder}`
+> Labeled data: Neurofinder (mouse)
 
 Left column, group 1 header "Advantages":
 
 - Labeled data, the scarce and expensive resource
-- 28 movies from 4 labs (19 train / 9 test)
+- 28 movies from 4 labs (19 train / 9 test) `\cite{neurofinder}`
 - Diverse brain regions, microscopes, indicators, SNR → generalization
 
 Left column, group 2 header "Limitations":

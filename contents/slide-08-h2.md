@@ -26,4 +26,4 @@ Figure (right, about half slide width):
 
 - File: `contents/images/h2-transfer.png`
 - Three curves of held-out mouse Dice vs labeled fraction: from-scratch, same-species SSL (mouse), cross-species SSL (Drosophila+zebrafish). The two SSL curves nearly overlap — that is the point.
-- This is our own figure; no external source credit needed.
+- This is my own figure; no external source credit needed.

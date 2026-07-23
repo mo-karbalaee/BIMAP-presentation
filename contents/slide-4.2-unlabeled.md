@@ -2,7 +2,7 @@ Generate slide 5 of the NEUROSEG presentation, the unlabeled-data slide (right a
 
 You are the LaTeX manager. The content below is FINAL. Render the bullets as-is: short, minimal, one idea each. Do NOT expand into sentences or paragraphs, and do not add content. This is a talk, not a paper.
 
-Message of this slide: we also have unlabeled cross-species calcium video (Drosophila larvae + zebrafish), provided by S. Hauser. No labels are needed for self-supervised pretraining, so this data is directly usable, and it is what makes the cross-species question (H2) possible.
+Message of this slide: I also have unlabeled cross-species calcium video (Drosophila larvae + zebrafish), provided by S. Hauser. No labels are needed for self-supervised pretraining, so this data is directly usable, and it is what makes the cross-species question (H2) possible.
 
 Layout:
 - Bullets across the top (compact).

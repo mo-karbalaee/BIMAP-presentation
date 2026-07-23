@@ -19,7 +19,7 @@ Bullets (render exactly these, terse):
 - **Pretrain:** self-supervised (JEPA) on the calcium video with labels removed
 - **Fine-tune + test:** hold out one labeled recording, split it 80/20 → fine-tune at 10–100% of the train, test on the fixed 20%
 - **Baselines:** from-scratch (same split) + off-the-shelf Cellpose `\cite{stringer2021cellpose}`
-- **Metrics:** Dice (pixel overlap) + detection F1 (did we find each neuron?)
+- **Metrics:** Dice (pixel overlap) + detection F1 (did I find each neuron?)
 - **Result:** JEPA-pretrained and from-scratch both far exceed off-the-shelf Cellpose, and perform comparably to each other across all label fractions
 
 Figure (top, full width):
@@ -27,4 +27,4 @@ Figure (top, full width):
 - File: `contents/images/h1-results.png`
 - Two panels, Dice (left) and detection F1 (right), each vs labeled fraction, with three series: JEPA-pretrained, from-scratch supervised, and Cellpose (dashed reference line).
 - All scores are native-resolution, field-level, on held-out clips of the same recording — one consistent protocol so the numbers are directly comparable.
-- This is our own figure; no external source credit needed.
+- This is my own figure; no external source credit needed.
