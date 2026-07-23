@@ -32,4 +32,4 @@ Media (right, about 35% slide width) — visual evidence for "neurons not separa
 
 - Primary: embed the video `contents/videos/my-segmentation.mp4` (my model's segmentation on mouse, looping). Use media9 with the still below as poster.
 - Fallback still: `contents/images/my-segmentation.png`
-- Caption (italic, small): *My segmentation: finds ~153 of 330 neurons, merges neighbors*
+- Caption (italic, small): *The numbers say I beat the baseline (Cellpose), but its masks look cleaner and more stable to my eye*
