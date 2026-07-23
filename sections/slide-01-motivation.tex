@@ -20,15 +20,19 @@
 \end{itemize}
 \end{column}
 \hfill%
-% ---- Right: looping raw-calcium video (~40% width), vertically centered --
-% Flash-free animation (100 frames @ 10 fps). Autoplays/loops in Acrobat;
-% shows the first frame as a static poster in other viewers.
+% ---- Right: "input -> goal" pair, stacked vertically (~40% width) --------
+% Top: looping raw-calcium video (Acrobat) with still poster elsewhere.
+% Bottom: the activity-traces plot. A labelled down-arrow links them.
 \begin{column}{0.40\textwidth}
 \centering
-\animategraphics[autoplay,loop,width=0.55\textheight]{10}%
-{contents/videos/frames-raw/raw-}{1}{100}\\[0.4em]
-{\small\itshape Raw calcium imaging: neurons brighten as they fire}\\[0.3em]
-{\scriptsize Neurofinder \texttt{00.00}, mouse cortex, Svoboda Lab / Janelia
+\animategraphics[autoplay,loop,height=0.28\textheight]{10}%
+{contents/videos/frames-raw/raw-}{1}{100}\\[0.15em]
+{\tiny\itshape Raw video}\\[0.4em]
+{\large$\downarrow$}\;{\scriptsize segment each neuron}\\[0.4em]
+\includegraphics[width=\linewidth,height=0.24\textheight,keepaspectratio]%
+{contents/images/activity-traces.png}\\[0.15em]
+{\tiny\itshape What we want: one activity trace per neuron}\\[0.4em]
+{\tiny Neurofinder \texttt{00.00}, mouse cortex, Svoboda Lab / Janelia
  \cite{peron2015barrel, neurofinder}}
 \end{column}
 \end{columns}
