@@ -1,45 +1,33 @@
 % ..............................................................................
-% Slide 10 -- What we'd criticize in our own results (self-critique)
-% Source content: contents/slide-10-critique.md  (bullets are FINAL -- render as-is)
-%
-% NOTE: each column starts with a bare bold header. Bare body text inherits the
-% frametitle colour and hugs the title, so we force \color{black} and a \par
-% break before the list (same leak we fixed on the unlabeled-data slide).
+% Slide 10 -- How solid are these results? (self-critique, table form)
+% Source content: contents/slide-10-critique.md  (FINAL -- render as-is)
 % ------------------------------------------------------------------------------
 \section{Critique}
 
-\begin{frame}[t]{What we'd criticize in our own results}
-\begin{columns}[t]
-% ---- Statistics ----------------------------------------------------------
-\begin{column}{0.5\textwidth}
-{\footnotesize\color{black}%
-\textbf{Our statistics don't prove what they seem to}\par\vspace{0.35em}
-\begin{itemize}\itemsep=0.25em
-\item The JEPA vs supervised gap is statistically significant, yet \textbf{tiny
-      ($\Delta \approx 0.02$) and flips} with label fraction and resolution
-      $\to$ significance here is misleading, not a real effect
-\item For H3, $p$-values are meaningless at millions of pairs $\to$ only
-      \textbf{effect size} is honest (Cohen's $d$: SSL 0.66, supervised 1.45,
-      random 0.14)
-\item Every result is a \textbf{single training seed} $\to$ we cannot separate a
-      real effect from training noise
-\end{itemize}}
-\end{column}
-\hfill%
-% ---- What results do NOT show --------------------------------------------
-\begin{column}{0.5\textwidth}
-{\footnotesize\color{black}%
-\textbf{What our results do NOT show}\par\vspace{0.35em}
-\begin{itemize}\itemsep=0.25em
-\item \textbf{Dice and mIoU are redundant} --- pixel overlap can look strong
-      while neuron \textit{detection} stays poor (detection F1 $\sim$0.2 for all)
-\item Our win over Cellpose is \textbf{not apples-to-apples} --- we are trained
-      on the target, Cellpose is zero-shot and untuned
-\item We \textbf{train and test on the same recording} $\to$ cross-recording
-      generalization is unproven
-\item Our SSL pretraining \textbf{never converges} (validation loss diverges)
-      $\to$ these are floor numbers, not the method's real potential
-\end{itemize}}
+\begin{frame}[t]{How solid are these results?}
+% Full-width column wrapper: keeps body text black and off the title band.
+\begin{columns}
+\begin{column}{0.98\textwidth}
+\color{black}\centering
+% ---- Methods line under the title ----------------------------------------
+{\small Statistical tests: paired Wilcoxon (H1),
+ Mann--Whitney~U + Cohen's $d$ + bootstrap CI (H3)}\\[1.4em]
+% ---- Looks like / Honest catch table -------------------------------------
+{\small\renewcommand{\arraystretch}{1.5}%
+\begin{tabular}{@{}p{0.40\textwidth}@{\hspace{2em}}p{0.50\textwidth}@{}}
+\textbf{Looks like} & \textbf{Honest catch}\\[0.2em]
+\hline\\[-0.85em]
+SSL $\approx$ supervised (H1) & significant, but $\Delta \approx 0.02$ and flips
+                                $\to$ not real\\
+SSL tells neurons apart (H3)  & only medium effect: $d = 0.66$ vs $1.45$
+                                supervised\\
+Beats Cellpose                & I trained on the target; Cellpose is zero-shot\\
+Strong Dice                   & detection F1 $\approx 0.2$ $\to$ neurons not
+                                separated\\
+\end{tabular}}\\[1.4em]
+% ---- Footer caveats line -------------------------------------------------
+{\small Also: single seed $\cdot$ train + test on one recording $\cdot$
+ SSL pretraining under-converged}
 \end{column}
 \end{columns}
 \end{frame}
