@@ -1,0 +1,55 @@
+% ..............................................................................
+% Slide 11 -- Conclusion (final content slide, text only)
+% Source content: contents/slide-11-conclusion.md  (bullets are FINAL -- render as-is)
+% ------------------------------------------------------------------------------
+\section{Conclusion}
+
+\begin{frame}[t]{Conclusion}
+% ---- Thesis line under the title (wrapped so it stays black + in the body)
+\begin{columns}\begin{column}{0.95\textwidth}\color{black}\centering
+{\small An honest first attempt at a novel approach: self-supervised, JEPA-style
+ neuron segmentation for calcium imaging.}
+\end{column}\end{columns}
+\medskip
+
+% ---- Three grouped blocks, side by side ----------------------------------
+{\footnotesize
+\begin{columns}[t]
+\begin{column}{0.32\textwidth}\color{black}
+\textbf{Where it stands:}\par\vspace{0.3em}
+\begin{itemize}\itemsep=0.2em
+\item A working, reproducible pipeline: SSL already matches supervised and
+      transfers across species
+\item No decisive win yet, and I know why: the SSL pretraining under-converges
+      (representation collapse)
+\end{itemize}
+\end{column}
+\hfill%
+\begin{column}{0.32\textwidth}\color{black}
+\textbf{Why I believe it can beat the baselines:}\par\vspace{0.3em}
+\begin{itemize}\itemsep=0.2em
+\item A stronger SSL backbone: better predictor + target encoder
+\item Directly attack representation collapse: variance-covariance
+      regularization, tuning
+\item Train on much more unlabeled calcium video: the data is abundant and cheap
+\end{itemize}
+\end{column}
+\hfill%
+\begin{column}{0.32\textwidth}\color{black}
+\textbf{Why it matters:}\par\vspace{0.3em}
+\begin{itemize}\itemsep=0.2em
+\item Novel: JEPA-style self-supervision applied to calcium-imaging segmentation
+\item Learns from abundant unlabeled video $\to$ far less dependence on scarce
+      manual labels
+\end{itemize}
+\end{column}
+\end{columns}}
+
+\vfill
+% ---- Closing line: emphasized, full width --------------------------------
+\begin{columns}\begin{column}{0.92\textwidth}\centering
+{\color{BaseColor}\itshape An honest result today, and a clear path to outperform
+ the baselines: that is what makes this approach worth pushing further.}
+\end{column}\end{columns}
+\vspace*{0.5em}
+\end{frame}
