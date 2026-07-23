@@ -5,15 +5,20 @@
 \section{Motivation}
 
 \begin{frame}[t]{Calcium imaging: recording neuronal activity}
-% ==== Top row: input (video) | goal (activity traces), side by side ========
+% ==== Top row: input (video) --> goal (activity traces), side by side ======
 \begin{columns}[c]
-\begin{column}{0.48\textwidth}\centering
+\begin{column}{0.42\textwidth}\centering
 % Flash-free looping video (Acrobat); static poster frame elsewhere.
 \animategraphics[autoplay,loop,height=0.34\textheight]{10}%
 {contents/videos/frames-raw/raw-}{1}{100}\\[0.2em]
 {\tiny\itshape Raw video (input)}
 \end{column}
-\begin{column}{0.48\textwidth}\centering
+% ---- Middle: labelled arrow linking input to goal ------------------------
+\begin{column}{0.14\textwidth}\centering
+{\tiny segment\\each neuron}\\[0.3em]
+{\LARGE$\longrightarrow$}
+\end{column}
+\begin{column}{0.42\textwidth}\centering
 \includegraphics[width=\linewidth,height=0.34\textheight,keepaspectratio]%
 {contents/images/activity-traces.png}\\[0.2em]
 {\tiny\itshape The goal: segment each neuron, then read its activity
