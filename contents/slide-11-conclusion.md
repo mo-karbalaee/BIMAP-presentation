@@ -34,4 +34,4 @@ Grouped bullets (render exactly these, keep them terse):
 
 Closing line (bottom, emphasized, full width):
 
-> A strong first result, and a clear path to outperform the baselines: that is what makes this approach worth pushing further.
+> The ground work is done, but there is room for improvement and it's worth the effort. Still a challenging novel approach. 
