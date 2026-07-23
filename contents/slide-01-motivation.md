@@ -4,9 +4,10 @@ You are the LaTeX manager. The content below is FINAL and already written as pre
 
 Scope of this slide: only what calcium imaging is, why it matters, and why automatic segmentation is needed. No methods, no hypotheses, no results.
 
-Layout fixes (the current render is broken):
-- The title is overlapping the footer. Put the title in the normal title area at the top; content must not collide with the footer band.
-- The image is too big. Shrink it to about one third of the slide width, on the right, vertically centered. Text bullets on the left.
+Layout:
+- Top: two media side by side, HORIZONTALLY — raw video on the LEFT, the activity-trace figure on the RIGHT.
+- Bullets go UNDERNEATH the media, spanning the width.
+- Title in the top title area; nothing may collide with the footer band.
 
 Slide title:
 
@@ -21,8 +22,10 @@ Bullets (render exactly these, terse):
 - Manual annotation: slow, subjective, doesn't scale
 - **Goal:** automatic segmentation → fast, objective, scalable
 
-Media (right side, about 40% slide width) — an "input → goal" pair, stacked vertically, with a small down-arrow labelled "segment each neuron" between them:
+Media — an "input → goal" story, side by side in a top row:
 
-- Top (input): the video `contents/videos/raw-calcium.mp4` (raw calcium recording, looping; neurons brighten as they fire). Use media9 with the still `contents/images/raw-calcium-frame.png` as poster. Caption (italic, tiny): *Raw video*
-- Bottom (the goal): the plot `contents/images/activity-traces.png`. Caption (italic, tiny): *What we want: one activity trace per neuron*
-- Source line (tiny, under the pair): Neurofinder 00.00, mouse cortex, Svoboda Lab / Janelia `\cite{peron2015barrel, neurofinder}`
+- LEFT (input): the video `contents/videos/raw-calcium.mp4` (raw calcium recording, looping; neurons brighten as they fire). Use media9 with the still `contents/images/raw-calcium-frame.png` as poster. Caption (italic, tiny): *Raw video (input)*
+- RIGHT (the goal): the figure `contents/images/activity-traces.png` — a neuron map plus their matching activity traces. Caption (italic, tiny): *The goal: segment each neuron, then read its activity (6 examples, ΔF/F)*
+- Source line (tiny, under the media): Neurofinder 00.00, mouse cortex, Svoboda Lab / Janelia `\cite{peron2015barrel, neurofinder}`
+
+Bullets: render UNDERNEATH the media row (see the bullet list above), spanning the slide width.

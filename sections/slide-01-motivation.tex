@@ -5,10 +5,28 @@
 \section{Motivation}
 
 \begin{frame}[t]{Calcium imaging: recording neuronal activity}
+% ==== Top row: input (video) | goal (activity traces), side by side ========
 \begin{columns}[c]
-% ---- Left: terse bullets -------------------------------------------------
-\begin{column}{0.56\textwidth}
-\begin{itemize}
+\begin{column}{0.48\textwidth}\centering
+% Flash-free looping video (Acrobat); static poster frame elsewhere.
+\animategraphics[autoplay,loop,height=0.34\textheight]{10}%
+{contents/videos/frames-raw/raw-}{1}{100}\\[0.2em]
+{\tiny\itshape Raw video (input)}
+\end{column}
+\begin{column}{0.48\textwidth}\centering
+\includegraphics[width=\linewidth,height=0.34\textheight,keepaspectratio]%
+{contents/images/activity-traces.png}\\[0.2em]
+{\tiny\itshape The goal: segment each neuron, then read its activity
+ (6 examples, $\Delta F/F$)}
+\end{column}
+\end{columns}
+\begin{center}{\tiny Neurofinder \texttt{00.00}, mouse cortex,
+ Svoboda Lab / Janelia \cite{peron2015barrel, neurofinder}}\end{center}
+
+\vfill
+% ==== Bullets underneath, spanning the full width ==========================
+{\small
+\begin{itemize}\itemsep=0.2em
 \item Calcium imaging: a direct readout of brain activity
       \cite{grienberger2012calcium}
 \item Neuron fires $\to$ Ca$^{2+}$ rises $\to$ indicator brightens $\to$ active
@@ -17,23 +35,5 @@
 \item Raw movie $\neq$ science: each neuron must be \textbf{segmented} first
 \item Manual annotation: slow, subjective, doesn't scale
 \item \textbf{Goal:} automatic segmentation $\to$ fast, objective, scalable
-\end{itemize}
-\end{column}
-\hfill%
-% ---- Right: "input -> goal" pair, stacked vertically (~40% width) --------
-% Top: looping raw-calcium video (Acrobat) with still poster elsewhere.
-% Bottom: the activity-traces plot. A labelled down-arrow links them.
-\begin{column}{0.40\textwidth}
-\centering
-\animategraphics[autoplay,loop,height=0.28\textheight]{10}%
-{contents/videos/frames-raw/raw-}{1}{100}\\[0.15em]
-{\tiny\itshape Raw video}\\[0.4em]
-{\large$\downarrow$}\;{\scriptsize segment each neuron}\\[0.4em]
-\includegraphics[width=\linewidth,height=0.24\textheight,keepaspectratio]%
-{contents/images/activity-traces.png}\\[0.15em]
-{\tiny\itshape What we want: one activity trace per neuron}\\[0.4em]
-{\tiny Neurofinder \texttt{00.00}, mouse cortex, Svoboda Lab / Janelia
- \cite{peron2015barrel, neurofinder}}
-\end{column}
-\end{columns}
+\end{itemize}}
 \end{frame}
