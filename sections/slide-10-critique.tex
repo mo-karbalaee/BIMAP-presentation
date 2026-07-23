@@ -1,15 +1,19 @@
 % ..............................................................................
 % Slide 10 -- What we'd criticize in our own results (self-critique)
 % Source content: contents/slide-10-critique.md  (bullets are FINAL -- render as-is)
+%
+% NOTE: each column starts with a bare bold header. Bare body text inherits the
+% frametitle colour and hugs the title, so we force \color{black} and a \par
+% break before the list (same leak we fixed on the unlabeled-data slide).
 % ------------------------------------------------------------------------------
 \section{Critique}
 
 \begin{frame}[t]{What we'd criticize in our own results}
-{\footnotesize
 \begin{columns}[t]
 % ---- Statistics ----------------------------------------------------------
 \begin{column}{0.5\textwidth}
-\textbf{Our statistics don't prove what they seem to}
+{\footnotesize\color{black}%
+\textbf{Our statistics don't prove what they seem to}\par\vspace{0.35em}
 \begin{itemize}\itemsep=0.25em
 \item The JEPA vs supervised gap is statistically significant, yet \textbf{tiny
       ($\Delta \approx 0.02$) and flips} with label fraction and resolution
@@ -19,12 +23,13 @@
       random 0.14)
 \item Every result is a \textbf{single training seed} $\to$ we cannot separate a
       real effect from training noise
-\end{itemize}
+\end{itemize}}
 \end{column}
 \hfill%
 % ---- What results do NOT show --------------------------------------------
 \begin{column}{0.5\textwidth}
-\textbf{What our results do NOT show}
+{\footnotesize\color{black}%
+\textbf{What our results do NOT show}\par\vspace{0.35em}
 \begin{itemize}\itemsep=0.25em
 \item \textbf{Dice and mIoU are redundant} --- pixel overlap can look strong
       while neuron \textit{detection} stays poor (detection F1 $\sim$0.2 for all)
@@ -34,8 +39,7 @@
       generalization is unproven
 \item Our SSL pretraining \textbf{never converges} (validation loss diverges)
       $\to$ these are floor numbers, not the method's real potential
-\end{itemize}
+\end{itemize}}
 \end{column}
 \end{columns}
-}
 \end{frame}
