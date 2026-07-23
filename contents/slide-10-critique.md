@@ -1,8 +1,10 @@
 Generate slide 10 of the NEUROSEG presentation, the critique + limitations slide (right after H3, before the conclusion).
 
-You are the LaTeX manager. Render this as a presentation slide: minimal text, telegraphic. Use the table as the centerpiece. Do NOT turn cells into sentences. This is a talk, not a paper.
+You are the LaTeX manager. Render this as a presentation slide: minimal text, telegraphic. Do NOT turn cells into sentences. This is a talk, not a paper.
 
 PURPOSE: show that I can critically diagnose the weaknesses in my OWN results — recognition of issues, not fixes. The table is organized BY hypothesis so each critique clearly maps to H1, H2, or H3.
+
+Layout: table + text on the left; the segmentation video on the right (about 35% slide width), as visual evidence for the "neurons not separated" point.
 
 Slide title:
 
@@ -25,3 +27,9 @@ Below the table, a short list headed "Across all three:":
 - Dice and mIoU are redundant → detection F1 ≈ 0.2 for every model → neurons not separated
 - "Beats Cellpose" is not fair: I train on the target, Cellpose is zero-shot
 - single seed · train + test on one recording · SSL pretraining under-converges
+
+Media (right, about 35% slide width) — visual evidence for "neurons not separated":
+
+- Primary: embed the video `contents/videos/my-segmentation.mp4` (my model's segmentation on mouse, looping). Use media9 with the still below as poster.
+- Fallback still: `contents/images/my-segmentation.png`
+- Caption (italic, small): *My segmentation: finds ~153 of 330 neurons, merges neighbors*

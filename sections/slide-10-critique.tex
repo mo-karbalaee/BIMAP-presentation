@@ -1,23 +1,22 @@
 % ..............................................................................
-% Slide 10 -- How solid are these results? (self-critique, per-hypothesis table)
+% Slide 10 -- How solid are these results? (self-critique table + evidence video)
 % Source content: contents/slide-10-critique.md  (FINAL -- render as-is)
 % ------------------------------------------------------------------------------
 \section{Critique}
 
 \begin{frame}[t]{How solid are these results?}
-% Full-width column wrapper: keeps body text black and off the title band.
-\begin{columns}
-\begin{column}{0.98\textwidth}
-\color{black}\centering
-% ---- Methods line under the title ----------------------------------------
+\begin{columns}[c]
+% ==== Left: methods line + per-hypothesis table + across-all-three list ====
+\begin{column}{0.62\textwidth}
+\color{black}%
 {\footnotesize Statistical tests: paired Wilcoxon \cite{wilcoxon1945} (H1, H2),
  Mann--Whitney~U \cite{mannwhitney1947} + Cohen's $d$ \cite{cohen1988} +
- bootstrap CI \cite{efron1979} (H3)}\\[1.2em]
-% ---- Per-hypothesis table ------------------------------------------------
-{\footnotesize\renewcommand{\arraystretch}{1.4}%
-\begin{tabular}{@{}c@{\hspace{1.2em}}p{0.30\textwidth}@{\hspace{1.2em}}p{0.48\textwidth}@{}}
-& \textbf{Claim} & \textbf{Honest catch}\\[0.2em]
-\hline\\[-0.85em]
+ bootstrap CI \cite{efron1979} (H3)}\par\vspace{0.7em}
+%
+{\scriptsize\renewcommand{\arraystretch}{1.3}%
+\begin{tabular}{@{}c@{\hspace{0.6em}}p{0.17\textwidth}@{\hspace{0.6em}}p{0.30\textwidth}@{}}
+& \textbf{Claim} & \textbf{Honest catch}\\[0.15em]
+\hline\\[-0.8em]
 \textbf{H1} & SSL beats supervised & significant but $\Delta \approx 0.02$ and
               flips $\to$ not a real effect\\
 \textbf{H2} & no cross-species penalty & calcium patterns look alike across
@@ -25,11 +24,10 @@
               segmentation\\
 \textbf{H3} & SSL tells neurons apart & real but only medium: Cohen's $d$ 0.66
               (supervised 1.45)\\
-\end{tabular}}\\[1.2em]
-% ---- Across-all-three list -----------------------------------------------
-\begin{minipage}{0.9\textwidth}
+\end{tabular}}\par\vspace{0.7em}
+%
 {\footnotesize\textbf{Across all three:}
-\begin{itemize}\itemsep=0.15em
+\begin{itemize}\itemsep=0.12em
 \item Dice and mIoU are redundant $\to$ detection F1 $\approx 0.2$ for every
       model $\to$ neurons not separated
 \item \enquote{Beats Cellpose} is not fair: I train on the target, Cellpose is
@@ -37,7 +35,15 @@
 \item single seed $\cdot$ train + test on one recording $\cdot$ SSL pretraining
       under-converges
 \end{itemize}}
-\end{minipage}
+\end{column}
+\hfill%
+% ==== Right: my-segmentation video (evidence for "neurons not separated") ==
+\begin{column}{0.35\textwidth}
+\centering
+\animategraphics[autoplay,loop,width=\linewidth,height=0.72\textheight,keepaspectratio]{10}%
+{contents/videos/frames-myseg/myseg-}{1}{60}\\[0.3em]
+{\scriptsize\itshape My segmentation: finds $\sim$153 of 330 neurons, merges
+ neighbors}
 \end{column}
 \end{columns}
 \end{frame}
