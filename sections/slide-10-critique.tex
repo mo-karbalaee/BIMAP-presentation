@@ -28,8 +28,8 @@
 %
 {\footnotesize\textbf{Across all three:}
 \begin{itemize}\itemsep=0.12em
-\item Dice and mIoU are redundant $\to$ detection F1 $\approx 0.2$ for every
-      model $\to$ neurons not separated
+\item good pixel Dice, but detection F1 $\approx 0.2$ for every model $\to$
+      neurons merged, not separated as instances
 \item \enquote{Beats Cellpose} is not fair: I train on the target, Cellpose is
       zero-shot
 \item single seed $\cdot$ train + test on one recording $\cdot$ SSL pretraining

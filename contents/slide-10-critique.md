@@ -24,7 +24,7 @@ Main content — a three-row table, one row per hypothesis (keep cells to a few 
 
 Below the table, a short list headed "Across all three:":
 
-- Dice and mIoU are redundant → detection F1 ≈ 0.2 for every model → neurons not separated
+- good pixel Dice, but detection F1 ≈ 0.2 for every model → neurons merged, not separated as instances
 - "Beats Cellpose" is not fair: I train on the target, Cellpose is zero-shot
 - single seed · train + test on one recording · SSL pretraining under-converges
 

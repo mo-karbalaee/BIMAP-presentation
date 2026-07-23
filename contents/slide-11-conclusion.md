@@ -2,7 +2,7 @@ Generate slide 11 of the NEUROSEG presentation, the conclusion slide (the final 
 
 You are the LaTeX manager. The content below is FINAL. Render the bullets as-is: short, minimal, one idea each. Do NOT expand into sentences or paragraphs, and do not add content. This is a talk, not a paper. First person singular throughout (I / my, never we / our).
 
-Message of this slide: this was an honest first attempt at a novel approach. I did not decisively beat the baselines yet, but I understand exactly why, and I am convinced the approach can outperform them once the self-supervised backbone is fixed and trained on more data. The value is the novelty: self-supervised JEPA-style learning applied to calcium-imaging segmentation.
+Message of this slide: this was a first attempt at a novel approach. I did not decisively beat the baselines yet, but I understand exactly why, and I am convinced the approach can outperform them once the self-supervised backbone is fixed and trained on more data. The value is the novelty: self-supervised JEPA-style learning applied to calcium-imaging segmentation.
 
 Layout:
 - No media. Text only, three short grouped blocks with bold headers.
@@ -15,7 +15,7 @@ Slide title:
 
 Thesis line (small, directly under the title):
 
-An honest first attempt at a novel approach: self-supervised, JEPA-style neuron segmentation for calcium imaging.
+A first attempt at a novel approach: self-supervised, JEPA-style neuron segmentation for calcium imaging.
 
 Grouped bullets (render exactly these, keep them terse):
 
@@ -34,4 +34,4 @@ Grouped bullets (render exactly these, keep them terse):
 
 Closing line (bottom, emphasized, full width):
 
-> An honest result today, and a clear path to outperform the baselines: that is what makes this approach worth pushing further.
+> A strong first result, and a clear path to outperform the baselines: that is what makes this approach worth pushing further.
